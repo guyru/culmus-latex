@@ -65,6 +65,10 @@ include: aharoni, miriam, david, nachlieli, ellinia, yehuda, drugulin.
 
 Change Log
 ----------
+
+culmus-latex-0.6 (UNRELEASED YET)
+- Add support for DESTDIR in the Makefile
+
 culmus-latex-0.5
 - Name change.
 
