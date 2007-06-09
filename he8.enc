@@ -1,0 +1,138 @@
+% Encoding file for the Culmus project Type 1 Hebrew fonts:
+% DROR family, NACHLIELI family
+%
+% Nikud and special punctuation located according to Microsoft Windows-1255 Code
+% Page
+%
+% Includes special ligatures for easy input of nikud
+% 
+% $Id: culmus-he8.enc,v 1.2 2003/10/23 08:50:41 tzafrir Exp $
+% Encoding modified by:
+%   Yotam Medini  yotam_medini@fastmail.fm  2003-02-February-19
+% to be closer to 
+% http://www.microsoft.com/globaldev/reference/sbcs/1255.htm
+
+/HE8Encoding [          % now 256 chars follow
+% 0x00
+  /grave /acute /circumflex /tilde
+  /dieresis /hungarumlaut /ring /caron
+  /breve /macron /dotaccent /cedilla
+  /ogonek /quotesinglbase /guilsinglleft /guilsinglright
+% 0x10
+  /quotedblleft /quotedblright /quotedblbase /guillemotleft
+  /guillemotright /endash /emdash /compwordmark
+  /perthousandzero /dotlessi /dotlessj /ff
+  /fi /fl /ffi /ffl
+% 0x20
+%  /visualspace /exclam /quotedbl /numbersign
+  /visualspace /exclam /uni05F4 /numbersign
+%  /dollar /percent /ampersand /quoteright
+  /dollar /percent /ampersand /uni05F3
+  /parenleft /parenright /asterisk /plus
+  /comma /afii57645 /period /slash	% MAQAF is used instead of minus
+% 0x30
+  /zero /one /two /three
+  /four /five /six /seven
+  /eight /nine /colon /semicolon
+  /less /equal /greater /question
+% 0x40
+ /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O
+% 0x50
+ /P /Q /R /S /T /U /V /W
+ /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+% 0x60
+ /quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o
+% 0x70
+ /p /q /r /s /t /u /v /w
+ /x /y /z /braceleft /bar /braceright /asciitilde
+ /.notdef % rubout; ASCII ends
+% 0x80
+  /uniFB30 /uniFB31 /uniFB32 /uniFB33	% alef-mapiq bet-dagesh gimel-dagesh dalet-dagesh
+  /uniFB34 /afii57723 /uniFB36 /uniFB37	% he-mapiq vav-dagesh zayin-dagesh *
+  /uniFB38 /uniFB39 /uniFB3A /uniFB3B	% tet-dagesh yod-dagesh kaf-sofit-dagesh kaf-dagesh
+  /uniFB3C /uniFB3D /uniFB3E /uniFB3F	% lamed-dagesh * mem-dagesh *
+% 0x90
+  /uniFB40 /uniFB41 /uniFB42 /uniFB43	% nun-dagesh samekh-dagesh * fe-sofit-dagesh
+  /uniFB44 /uniFB45 /uniFB46 /uniFB47	% pe-dagesh * tsadi-dagesh quf-dagesh
+  /uniFB48 /uniFB49 /uniFB4A		% resh-dagesh shin-dagesh tav-dagesh
+  /ucircumflex
+  /udieresis /yacute /thorn /quotedash
+% 0xA0
+  /abreve /aogonek /cacute /ccaron
+  /dcaron /ecaron /eogonek /gbreve
+  /lacute /lcaron /lslash /nacute
+  /ncaron /eng /odblacute /racute
+% 0xB0
+  /rcaron /sacute /scaron /scedilla
+  /tcaron /tcedilla /udblacute /uring
+  /ydieresis /zacute /zcaron /zdot
+  /ij /exclamdown /questiondown /sterling
+% 0xC0
+  /afii57799 /afii57801 /afii57800 /afii57802  % sheva hataf{segol,patah,qamats}
+  /afii57793 /afii57794 /afii57795 /afii57798  % hiriq tsere segol patah
+  /afii57797 /afii57806 /.notdef /afii57796    % qamats holam -- qubuts
+  /afii57807 /afii57839 /afii57645 /afii57841  % dagesh meteg maqaf rafe
+% 0xD0
+  /afii57842 /afii57804 /afii57803 /afii57658  % paseq shindot sindot sofpasuq
+  /Ocircumflex /Otilde /Odieresis /OE
+  /Oslash /Ugrave /Uacute /Ucircumflex
+  /Udieresis /Yacute /Thorn /Germandbls
+% 0xE0
+  /afii57664 /afii57665 /afii57666 /afii57667	% alef beth gimel dalet
+  /afii57668 /afii57669 /afii57670 /afii57671	% he vav zayin het
+  /afii57672 /afii57673 /afii57674 /afii57675	% tet yod kaf-sofit kaf
+  /afii57676 /afii57677 /afii57678 /afii57679	% lamed mem-sofit mem nun-sofit
+% 0xF0
+  /afii57680 /afii57681 /afii57682 /afii57683	% nun samech ayin fe-sofit
+  /afii57684 /afii57685 /afii57686 /afii57687	% pe tsadi-sofit tsadi quf
+  /afii57688 /afii57689 /afii57690		% resh shin tav
+  /.notdef /.notdef 
+  /.notdef /.notdef                             % LTR RTL
+  /.notdef
+] def
+
+% Ligatures EE = segol, EEE = shva, HE = hataf-segol
+% LIGKERN afii57794 afii57794 =: afii57795
+% LIGKERN afii57795 afii57794 =: afii57799
+% LIGKERN H afii57794 =: afii57801
+
+% Ligatures AA = kamats, HA = hataf-patah
+% LIGKERN afii57798 afii57798 =: afii57797
+% LIGKERN H afii57798 =: afii57800
+
+% Ligatures HO = hataf-kamats
+% LIGKERN H afii57806 =: afii57802
+
+% Ligature MAQAF MAQAF = emdash
+% LIGKERN afii57645 afii57645 =: emdash
+
+% Ligatures letter+dagesh
+% LIGKERN afii57664 afii57807 =: uniFB30
+% LIGKERN afii57665 afii57807 =: uniFB31
+% LIGKERN afii57666 afii57807 =: uniFB32
+% LIGKERN afii57667 afii57807 =: uniFB33
+% LIGKERN afii57668 afii57807 =: uniFB34
+% LIGKERN afii57669 afii57807 =: afii57723
+% LIGKERN afii57670 afii57807 =: uniFB36
+% 
+% LIGKERN afii57672 afii57807 =: uniFB38
+% LIGKERN afii57673 afii57807 =: uniFB39
+% LIGKERN afii57674 afii57807 =: uniFB3A
+% LIGKERN afii57675 afii57807 =: uniFB3B
+% LIGKERN afii57676 afii57807 =: uniFB3C
+% 
+% LIGKERN afii57678 afii57807 =: uniFB3E
+%
+% LIGKERN afii57680 afii57807 =: uniFB40
+% LIGKERN afii57681 afii57807 =: uniFB41
+%
+% LIGKERN afii57683 afii57807 =: uniFB43
+% LIGKERN afii57684 afii57807 =: uniFB44
+%
+% LIGKERN afii57686 afii57807 =: uniFB46
+% LIGKERN afii57687 afii57807 =: uniFB47
+% LIGKERN afii57688 afii57807 =: uniFB48
+% LIGKERN afii57689 afii57807 =: uniFB49
+% LIGKERN afii57690 afii57807 =: uniFB4A
+
+% eof

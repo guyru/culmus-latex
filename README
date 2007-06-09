@@ -1,0 +1,80 @@
+culmus-latex
+==================
+Culmus fonts support for latex. Formerly knownn as tetex-fonts-hebrew. 
+
+Maintainer:          Guy Rutenberg <guyrutenberg@gmail.com>
+Original Maintainer: Dan Kenigsberg <danken@cs.technion.ac.il>
+You may also report any bugs or suggestions to 
+<IVRITEX@listserv.tau.ac.il>
+
+License
+-------
+culmus-latex is released under the term of the GPL version 2, or 
+(at your option) any later version. See GNU-GPL (distributed in this 
+package) for more details.
+
+Requirements 
+------------
+- teTex-3.0 (may also work on older version but untested).
+- The "Culmus" fonts package.
+
+Installation
+------------
+To install culmus-latex untar the package and cd into the 
+package's directory and execute:
+
+make
+make install
+
+The second command must be done as root. The installation process 
+assumes that the texmf dir resides in /usr/share/texmf and that the 
+culmus fonts reside in /usr/share/fonts/hebrew . To override this 
+settings append to the above command "CULMUSDIR=/path/to/culmus/" and/or 
+"TEXMFDIR=/path/to/texmf" (both without the quotes).
+
+After the installation was done you may want to clean some temporary 
+files created during the setup process. You can do it by executing 
+"make clean" (without the quotes). Keep the other files if you intend to 
+unistall the package at a later time.
+
+Uninstallation may be done by issuing "make uninstall"
+
+Notes to Packagers
+------------------
+Packagers might be interested in using "make pgkinstall" instead of 
+"make install" of source packages under systems that enforce a sandbox 
+policies (like Gentoo) during installation. It will cause the setup 
+process not to do mktexlsr and updmap. Those command should be done 
+later on those systems.
+
+While installing the package requires the culmus fonts, after the 
+installation was done there is no need anymore for the culmus package.
+
+Usage
+-----
+The package provides the culmus.sty package, you can enable the culmus 
+fonts as the default fonts in your document by adding 
+"\usepackage{culmus}" to the document preabmle. 
+
+You can also change the font-family manully without using the culmus 
+package. Just add the following line: 
+\fontfamily{frank}\selectfont 
+to alter the font-family used in the document from this line onward. 
+Using "frank" is one of the several font-family names available. Others 
+include: aharoni, miriam, david, nachlieli, ellinia, yehuda, drugulin.
+
+Change Log
+----------
+culmus-latex-0.5
+- Name change.
+
+tetex-fonts-hebrew-0.2
+- Several pathces for fixing the package on some distributions.
+- Uninstall script.
+- New maintainer.
+
+tetex-fonts-hebrew-0.1
+- Original package by Dan Kenigsberg.
+
+Many thanks should go to Dan Kenigsberg for making this package in the 
+first place. 

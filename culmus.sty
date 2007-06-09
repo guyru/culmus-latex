@@ -1,0 +1,42 @@
+\ProvidesPackage{culmus}
+
+\DeclareFontEncoding{HE8}{}{}
+\providecommand{\HeblatexEncoding}{HE8}%
+\providecommand{\HeblatexEncodingFile}{he8enc}%
+
+% an attempt to give some replacements to the original hebfonts:
+% 
+\DeclareTextFontCommand{\textcrml}{\fontfamily{david}\selectfont}
+\DeclareTextFontCommand{\textfr}{\fontfamily{frank}\selectfont}
+\DeclareTextFontCommand{\textredis}{\fontfamily{aharoni}\selectfont}
+\DeclareTextFontCommand{\textclas}{\fontfamily{drugulin}\selectfont}
+\DeclareTextFontCommand{\textshold}{\fontfamily{frank}\selectfont}
+\DeclareTextFontCommand{\textshscr}{\fontfamily{yad}\selectfont}
+% note that redis is larger than shstk
+\DeclareTextFontCommand{\textshstk}{\fontfamily{aharoni}\selectfont}
+
+% and finally: make it the default of HE8:
+\DeclareFontFamily{HE8}{cmr}{}
+\DeclareFontShape{HE8}{cmr}{m}{n} {<-> frank}{}
+\DeclareFontShape{HE8}{cmr}{m}{it} {<-> franki}{}
+\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> franki}{}
+\DeclareFontShape{HE8}{cmr}{b}{n} {<-> frankb}{}
+\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> frankb}{}
+\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> frankbi}{}
+
+\DeclareFontFamily{HE8}{cmtt}{}
+\DeclareFontShape{HE8}{cmtt}{m}{n} {<-> miriam}{}
+\DeclareFontShape{HE8}{cmtt}{m}{it} {<-> miriami}{}
+\DeclareFontShape{HE8}{cmtt}{m}{sl} {<-> miriami}{}
+\DeclareFontShape{HE8}{cmtt}{b}{n} {<-> miriamb}{}
+\DeclareFontShape{HE8}{cmtt}{bx}{n} {<-> miriamb}{}
+\DeclareFontShape{HE8}{cmtt}{bx}{it} {<-> miriambi}{}
+
+\DeclareFontFamily{HE8}{cmss}{}
+\DeclareFontShape{HE8}{cmss}{m}{n} {<-> nachlieli}{}
+\DeclareFontShape{HE8}{cmss}{m}{it} {<-> nachlielii}{}
+\DeclareFontShape{HE8}{cmss}{m}{sl} {<-> nachlielii}{}
+\DeclareFontShape{HE8}{cmss}{b}{n} {<-> nachlielib}{}
+\DeclareFontShape{HE8}{cmss}{bx}{n} {<-> nachlielib}{}
+\DeclareFontShape{HE8}{cmss}{bx}{it} {<-> nachlielibi}{}
+
