@@ -1,4 +1,4 @@
-TEXMFDIR=/usr/share/texmf
+TEXMFDIR=$(DESTDIR)/usr/share/texmf
 CULMUSDIR=/usr/share/fonts/hebrew
 
 tfms:
