@@ -1,0 +1,12 @@
+\ProvidesFile{he8zzznikud.fd}
+       [Hebrew font with Nikud (Culmus)]
+\DeclareFontShape{HE8}{zzznikud}{m}{n}   {<-> zzzClmNkd}{}
+\DeclareFontShape{HE8}{zzznikud}{m}{it}  {<-> zzzClmNkdi}{}
+\DeclareFontShape{HE8}{zzznikud}{m}{sl}  {<-> zzzClmNkdi}{}
+\DeclareFontShape{HE8}{zzznikud}{b}{n}   {<-> zzzClmNkdb}{}
+\DeclareFontShape{HE8}{zzznikud}{b}{it}  {<-> zzzClmNkdbi}{}
+\DeclareFontShape{HE8}{zzznikud}{b}{sl}  {<-> zzzClmNkdbi}{}
+\DeclareFontShape{HE8}{zzznikud}{bx}{n}  {<-> zzzClmNkdb}{}
+\DeclareFontShape{HE8}{zzznikud}{bx}{it} {<-> zzzClmNkdbi}{}
+\DeclareFontShape{HE8}{zzznikud}{bx}{sl} {<-> zzzClmNkdbi}{}
+\endinput

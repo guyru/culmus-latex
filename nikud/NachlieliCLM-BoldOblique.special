@@ -1,0 +1,83 @@
+afii57806 L 0 0             ;holam moves 0 points from left
+afii57841 C 0 20 ;rafe goes up
+afii57804 L 0 0 ;do not move shindot 
+afii57803 L 0 0 ;do not move sindot
+
+afii57665 afii57807 C -50 0 ;bet dagesh
+
+afii57666 afii57807 C -50 0 ;gimel dagesh
+
+afii57667 C 96 0            ;dalet points moves 100 points to the right from center
+afii57667 afii57801 C 0 0 ;dalet + hatafsegol centered
+afii57667 afii57800 C 0 0 ;dalet + hatafpatah centered
+afii57667 afii57802 C 0 0 ;dalet + hatafqamats centered
+
+afii57669 C -11 0 ;vav
+afii57669 afii57801 C 0 0 ;vav + hatafsegol centered
+afii57669 afii57800 C 0 0 ;vav + hatafpatah centered
+afii57669 afii57802 C 0 0 ;vav + hatafqamats centered
+afii57669 afii57806 C 0 0 ;vav + holam centered
+afii57669 afii57807 C -30 0 ;vav + dagesh
+afii57669 afii57803 C -250 20 ;vav + sindot for vav and holam haser
+
+afii57723 C 20 0 ;vav + dagesh
+afii57723 afii57801 C 0 0 ;vav + hatafsegol centered
+afii57723 afii57800 C 0 0 ;vav + hatafpatah centered
+afii57723 afii57802 C 0 0 ;vav + hatafqamats centered
+afii57723 afii57806 C 0 0 ;vav + holam centered
+afii57723 afii57807 C -30 0 ;vav + dagesh
+afii57723 afii57803 C -250 20 ;vav + sindot for vav and holam haser
+
+afii57670 C 0 0 ;zayin
+afii57670 afii57801 C 0 0 ;zayin + hatafsegol centered
+afii57670 afii57800 C 0 0 ;zayin + hatafpatah centered
+afii57670 afii57802 C 0 0 ;zayin + hatafqamats centered
+afii57670 afii57807 C -120 0 ;zayin + dagesh
+
+afii57672 afii57807 C 0 -30 ;tet + dagesh
+
+afii57673 afii57807 C -40 100 ;yod  + dagesh
+
+uniFB39 C 28 0 ;yod + dagesh
+
+afii57674 C -40 0 ; kaf final
+afii57674 afii57799 C 0 400 ; kaf finhal + sheva centered horizontaly and moves up 200 points
+afii57674 afii57797 C 0 350 ; kaf finhal + qamats centered horizontaly and moves up 200 points
+afii57674 afii57798 C 0 350 ; kaf finhal + patah centered horizontaly and moves up 200 points
+
+afii57675 C -30 0 ; kaf
+
+afii57676 C 5 0 ; lamed
+afii57676 afii57807 C 0 50 ;lamed  + dagesh
+afii57676 afii57806 L -20 0 ;lamed  + holam
+
+# afii57680 C -10 0; nun
+# uniFB20 C -60 0; alternative ayin
+uniFB20 afii57807 C 30 30 ;alternative ayin  + dagesh
+
+afii57684 afii57807 C 85 0 ; pe + dagesh
+afii57686 afii57807 C -120 -90 ; tsadi + dagesh
+
+afii57687 C 90 0 ;kof
+
+#afii57687 afii57801 C 70 0 ;kof + hatafsegol
+#afii57687 afii57800 C 70 0 ;kof + hatafpatah
+#afii57687 afii57802 C 70 0 ;kof + hatafqamats
+#afii57687 afii57796 C 70 0 ;kof + qubuts
+#afii57687 afii57797 C 30 0 ;kof + qamats
+#afii57687 afii57798 C 30 0 ;kof + patah
+
+
+afii57688 C 166 0; resh
+afii57688 afii57801 C 40 0 ;resh + hatafsegol
+afii57688 afii57800 C 40 0 ;resh + hatafpatah
+afii57688 afii57802 C 40 0 ;resh + hatafqamats
+
+# afii57689 C -40 0; shin
+afii57689 afii57807 C 65 0 ; shin + dagesh
+
+afii57690 C 20 0; tav
+afii57690 afii57801 C 0 0 ;tav + hatafsegol
+afii57690 afii57800 C 0 0 ;tav + hatafpatah
+afii57690 afii57802 C 0 0 ;tav + hatafqamats
+afii57690 afii57807 C 40 0 ; tav + dagesh
