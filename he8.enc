@@ -1,110 +1,301 @@
 % Encoding file for the Culmus project Type 1 Hebrew fonts:
-% DROR family, NACHLIELI family
 %
-% Nikud and special punctuation located according to Microsoft Windows-1255 Code
-% Page
-%
+% Nikud and special punctuation located according to Microsoft Windows-1255 Code Page
 % Includes special ligatures for easy input of nikud
-% 
+%
 % $Id: culmus-he8.enc,v 1.2 2003/10/23 08:50:41 tzafrir Exp $
+%
 % Encoding modified by:
 %   Yotam Medini  yotam_medini@fastmail.fm  2003-02-February-19
-% to be closer to 
+% to be closer to
 % http://www.microsoft.com/globaldev/reference/sbcs/1255.htm
+%
+% Merged in LIGKERN (alternative-Ayin, emdash/endash, ...) lines from
+%    nikud_for_babel_3.8-0.101.0/myculmus_with_dashes.enc
+% and reformatted:
+%    yotam.medini@gmail.com --  2007/September/16
 
-/HE8Encoding [          % now 256 chars follow
-% 0x00
-  /grave /acute /circumflex /tilde
-  /dieresis /hungarumlaut /ring /caron
-  /breve /macron /dotaccent /cedilla
-  /ogonek /quotesinglbase /guilsinglleft /guilsinglright
-% 0x10
-  /quotedblleft /quotedblright /quotedblbase /guillemotleft
-  /guillemotright /endash /emdash /compwordmark
-  /perthousandzero /dotlessi /dotlessj /ff
-  /fi /fl /ffi /ffl
-% 0x20
-%  /visualspace /exclam /quotedbl /numbersign
-  /visualspace /exclam /uni05F4 /numbersign
-%  /dollar /percent /ampersand /quoteright
-  /dollar /percent /ampersand /uni05F3
-  /parenleft /parenright /asterisk /plus
-  /comma /afii57645 /period /slash	% MAQAF is used instead of minus
-% 0x30
-  /zero /one /two /three
-  /four /five /six /seven
-  /eight /nine /colon /semicolon
-  /less /equal /greater /question
-% 0x40
- /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O
-% 0x50
- /P /Q /R /S /T /U /V /W
- /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
-% 0x60
- /quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o
-% 0x70
- /p /q /r /s /t /u /v /w
- /x /y /z /braceleft /bar /braceright /asciitilde
- /.notdef % rubout; ASCII ends
-% 0x80
-  /uniFB30 /uniFB31 /uniFB32 /uniFB33	% alef-mapiq bet-dagesh gimel-dagesh dalet-dagesh
-  /uniFB34 /afii57723 /uniFB36 /uniFB37	% he-mapiq vav-dagesh zayin-dagesh *
-  /uniFB38 /uniFB39 /uniFB3A /uniFB3B	% tet-dagesh yod-dagesh kaf-sofit-dagesh kaf-dagesh
-  /uniFB3C /uniFB3D /uniFB3E /uniFB3F	% lamed-dagesh * mem-dagesh *
-% 0x90
-  /uniFB40 /uniFB41 /uniFB42 /uniFB43	% nun-dagesh samekh-dagesh * fe-sofit-dagesh
-  /uniFB44 /uniFB45 /uniFB46 /uniFB47	% pe-dagesh * tsadi-dagesh quf-dagesh
-  /uniFB48 /uniFB49 /uniFB4A		% resh-dagesh shin-dagesh tav-dagesh
-  /ucircumflex
-  /udieresis /yacute /thorn /quotedash
-% 0xA0
-  /abreve /aogonek /cacute /ccaron
-  /dcaron /ecaron /eogonek /gbreve
-  /lacute /lcaron /lslash /nacute
-  /ncaron /eng /odblacute /racute
-% 0xB0
-  /rcaron /sacute /scaron /scedilla
-  /tcaron /tcedilla /udblacute /uring
-  /ydieresis /zacute /zcaron /zdot
-  /ij /exclamdown /questiondown /sterling
-% 0xC0
-  /afii57799 /afii57801 /afii57800 /afii57802  % sheva hataf{segol,patah,qamats}
-  /afii57793 /afii57794 /afii57795 /afii57798  % hiriq tsere segol patah
-  /afii57797 /afii57806 /.notdef /afii57796    % qamats holam -- qubuts
-  /afii57807 /afii57839 /afii57645 /afii57841  % dagesh meteg maqaf rafe
-% 0xD0
-  /afii57842 /afii57804 /afii57803 /afii57658  % paseq shindot sindot sofpasuq
-  /Ocircumflex /Otilde /Odieresis /OE
-  /Oslash /Ugrave /Uacute /Ucircumflex
-  /Udieresis /Yacute /Thorn /Germandbls
-% 0xE0
-  /afii57664 /afii57665 /afii57666 /afii57667	% alef beth gimel dalet
-  /afii57668 /afii57669 /afii57670 /afii57671	% he vav zayin het
-  /afii57672 /afii57673 /afii57674 /afii57675	% tet yod kaf-sofit kaf
-  /afii57676 /afii57677 /afii57678 /afii57679	% lamed mem-sofit mem nun-sofit
-% 0xF0
-  /afii57680 /afii57681 /afii57682 /afii57683	% nun samech ayin fe-sofit
-  /afii57684 /afii57685 /afii57686 /afii57687	% pe tsadi-sofit tsadi quf
-  /afii57688 /afii57689 /afii57690		% resh shin tav
-  /.notdef /.notdef 
-  /.notdef /.notdef                             % LTR RTL
-  /.notdef
+/HE8Encoding [
+  /grave             % 0x00   0
+  /acute             % 0x01   1
+  /circumflex        % 0x02   2
+  /tilde             % 0x03   3
+  /dieresis          % 0x04   4
+  /hungarumlaut      % 0x05   5
+  /ring              % 0x06   6
+  /caron             % 0x07   7
+  /breve             % 0x08   8
+  /macron            % 0x09   9
+  /dotaccent         % 0x0a  10
+  /cedilla           % 0x0b  11
+  /ogonek            % 0x0c  12
+  /quotesinglbase    % 0x0d  13
+  /guilsinglleft     % 0x0e  14
+  /guilsinglright    % 0x0f  15
+
+  /quotedblleft      % 0x10  16
+  /quotedblright     % 0x11  17
+  /quotedblbase      % 0x12  18
+  /guillemotleft     % 0x13  19
+  /guillemotright    % 0x14  20
+  /endash            % 0x15  21
+  /emdash            % 0x16  22
+  /cwm               % 0x17  23 % /bom /zerowidthnobreakspace
+  /perthousand       % 0x18  24 % /perzero (useless)
+  /dotlessi          % 0x19  25
+  /dotlessj          % 0x1a  26
+  /ff                % 0x1b  27
+  /fi                % 0x1c  28
+  /fl                % 0x1d  29
+  /ffi               % 0x1e  30
+  /ffl               % 0x1f  31
+
+  /space             % 0x20  32 % visiblespace (useless)
+  /exclam            % 0x21  33
+  /uni05F4           % 0x22  34  % was quotedbl
+  /numbersign        % 0x23  35
+  /dollar            % 0x24  36
+  /percent           % 0x25  37
+  /ampersand         % 0x26  38
+  /uni05F3           % 0x27  39  % quoteright
+  /parenleft         % 0x28  40
+  /parenright        % 0x29  41
+  /asterisk          % 0x2a  42
+  /plus              % 0x2b  43
+  /comma             % 0x2c  44
+  /afii57645         % 0x2d  45    % hyphen
+  /period            % 0x2e  46
+  /slash             % 0x2f  47
+
+  /zero              % 0x30  48
+  /one               % 0x31  49
+  /two               % 0x32  50
+  /three             % 0x33  51
+  /four              % 0x34  52
+  /five              % 0x35  53
+  /six               % 0x36  54
+  /seven             % 0x37  55
+  /eight             % 0x38  56
+  /nine              % 0x39  57
+  /colon             % 0x3a  58
+  /semicolon         % 0x3b  59
+  /less              % 0x3c  60
+  /equal             % 0x3d  61
+  /greater           % 0x3e  62
+  /question          % 0x3f  63
+
+  /at                % 0x40  64
+  /A                 % 0x41  65
+  /B                 % 0x42  66
+  /C                 % 0x43  67
+  /D                 % 0x44  68
+  /E                 % 0x45  69
+  /F                 % 0x46  70
+  /G                 % 0x47  71
+  /H                 % 0x48  72
+  /I                 % 0x49  73
+  /J                 % 0x4a  74
+  /K                 % 0x4b  75
+  /L                 % 0x4c  76
+  /M                 % 0x4d  77
+  /N                 % 0x4e  78
+  /O                 % 0x4f  79
+
+  /P                 % 0x50  80
+  /Q                 % 0x51  81
+  /R                 % 0x52  82
+  /S                 % 0x53  83
+  /T                 % 0x54  84
+  /U                 % 0x55  85
+  /V                 % 0x56  86
+  /W                 % 0x57  87
+  /X                 % 0x58  88
+  /Y                 % 0x59  89
+  /Z                 % 0x5a  90
+  /bracketleft       % 0x5b  91
+  /backslash         % 0x5c  92
+  /bracketright      % 0x5d  93
+  /asciicircum       % 0x5e  94
+  /underscore        % 0x5f  95 % /underline
+
+  /quoteleft         % 0x60  96
+  /a                 % 0x61  97
+  /b                 % 0x62  98
+  /c                 % 0x63  99
+  /d                 % 0x64 100
+  /e                 % 0x65 101
+  /f                 % 0x66 102
+  /g                 % 0x67 103
+  /h                 % 0x68 104
+  /i                 % 0x69 105
+  /j                 % 0x6a 106
+  /k                 % 0x6b 107
+  /l                 % 0x6c 108
+  /m                 % 0x6d 109
+  /n                 % 0x6e 110
+  /o                 % 0x6f 111
+
+  /p                 % 0x70 112
+  /q                 % 0x71 113
+  /r                 % 0x72 114
+  /s                 % 0x73 115
+  /t                 % 0x74 116
+  /u                 % 0x75 117
+  /v                 % 0x76 118
+  /w                 % 0x77 119
+  /x                 % 0x78 120
+  /y                 % 0x79 121
+  /z                 % 0x7a 122
+  /braceleft         % 0x7b 123
+  /bar               % 0x7c 124
+  /braceright        % 0x7d 125
+  /asciitilde        % 0x7e 126
+  /hyphen            % 0x7f 127 % /sfthyphen /hyphen /dash (hanging hyphen)
+
+                                % Here I put hebrew letters with dagesh (or mapiq)
+  /uniFB30           % 0x80 128 % alef-mapiq
+  /uniFB31           % 0x81 129 % bet-dagesh
+  /uniFB32           % 0x82 130 % gimel-dagesh
+  /uniFB33           % 0x83 131 % dalet-dagesh
+  /uniFB34           % 0x84 132 % he-mapiq
+  /afii57723         % 0x85 133 % vav-dagesh
+  /uniFB36           % 0x86 134 % zayin-dagesh
+  /uniFB37           % 0x87 135 % *
+  /uniFB38           % 0x88 136 % tet-dagesh
+  /uniFB39           % 0x89 137 % yod-dagesh
+  /uniFB3A           % 0x8a 138 % kaf-sofit-dagesh
+  /uniFB3B           % 0x8b 139 % kaf-dagesh
+  /uniFB3C           % 0x8c 140 % lamed-dagesh
+  /uniFB3D           % 0x8d 141 % *
+  /uniFB3E           % 0x8e 142 % mem-dagesh
+  /uniFB3F           % 0x8f 143 % *
+
+  /uniFB40           % 0x90 144 % nun-dagesh
+  /uniFB41           % 0x91 145 % samekh-dagesh
+  /uniFB42           % 0x92 146 % *
+  /uniFB43           % 0x93 147 % fe-sofit-dagesh
+  /uniFB44           % 0x94 148 % pe-dagesh
+  /uniFB45           % 0x95 149 % *
+  /uniFB46           % 0x96 150 % tsadi-dagesh
+  /uniFB47           % 0x97 151 % quf-dagesh
+  /uniFB48           % 0x98 152 % resh-dagesh
+  /uniFB49           % 0x99 153 % shin-dagesh
+  /uniFB4A           % 0x9a 154 % tav-dagesh
+  /uniFB20           % 0x9b 155 % alternative ayin
+  /IJ                % 0x9c 156
+  /Idotaccent        % 0x9d 157
+  /dcroat            % 0x9e 158 % /dbar % /dmacron
+  /section           % 0x9f 159
+
+  /abreve            % 0xa0 160
+  /aogonek           % 0xa1 161
+  /cacute            % 0xa2 162
+  /ccaron            % 0xa3 163
+  /dcaron            % 0xa4 164 % /dquoteright
+  /ecaron            % 0xa5 165
+  /eogonek           % 0xa6 166
+  /gbreve            % 0xa7 167
+  /lacute            % 0xa8 168
+  /lcaron            % 0xa9 169 % /lquoteright
+  /lslash            % 0xaa 170
+  /nacute            % 0xab 171
+  /ncaron            % 0xac 172
+  /eng               % 0xad 173 % /ng
+  /ohungarumlaut     % 0xae 174
+  /racute            % 0xaf 175
+
+  /rcaron            % 0xb0 176
+  /sacute            % 0xb1 177
+  /scaron            % 0xb2 178
+  /scedilla          % 0xb3 179 % /scommaaccent
+  /tcaron            % 0xb4 180 % /tquoteright
+  /tcedilla          % 0xb5 181 % /tcommaaccent
+  /uhungarumlaut     % 0xb6 182
+  /uring             % 0xb7 183
+  /ydieresis         % 0xb8 184
+  /zacute            % 0xb9 185
+  /zcaron            % 0xba 186
+  /zdotaccent        % 0xbb 187
+  /ij                % 0xbc 188
+  /exclamdown        % 0xbd 189
+  /questiondown      % 0xbe 190
+  /sterling          % 0xbf 191
+
+  /afii57799         % 0xc0 192 % HEBREW POINT SHEVA 192
+  /afii57801         % 0xc1 193 % HEBREW POINT HATAF SEGOL 193
+  /afii57800         % 0xc2 194 % HEBREW POINT HATAF PATAH 194
+  /afii57802         % 0xc3 195 % HEBREW POINT HATAF QAMATS 195
+  /afii57793         % 0xc4 196 % HEBREW POINT HIRIQ 196
+  /afii57794         % 0xc5 197 % HEBREW POINT TSERE 197
+  /afii57795         % 0xc6 198 % HEBREW POINT SEGOL 198
+  /afii57798         % 0xc7 199 % HEBREW POINT PATAH 199
+  /afii57797         % 0xc8 200 % HEBREW POINT QAMATS 200
+  /afii57806         % 0xc9 201 % HEBREW POINT HOLAM 201
+  /Ecircumflex       % 0xca 202
+  /afii57796         % 0xcb 203 % HEBREW POINT QUBUTS 203
+  /afii57807         % 0xcc 204 % HEBREW POINT DAGESH OR MAPIQ 204
+  /afii57839         % 0xcd 205 % HEBREW POINT METEG 205
+  /afii57645         % 0xce 206 % HEBREW PUNCTUATION MAQAF 206
+  /afii57841         % 0xcf 207 % HEBREW POINT RAFE 207
+
+  /afii57842         % 0xd0 208 % HEBREW PUNCTUATION PASEQ 208
+  /afii57804         % 0xd1 209 % HEBREW POINT SHIN DOT 209
+  /afii57803         % 0xd2 210 % HEBREW POINT SIN DOT 210
+  /afii57658         % 0xd3 211 % HEBREW PUNCTUATION SOF PASUQ 211
+  /afii57716         % 0xd4 212 % HEBREW LIGATURE YIDDISH DOUBLE VAV 212
+  /afii57717         % 0xd5 213 % HEBREW LIGATURE YIDDISH VAV YOD 213
+  /afii57718         % 0xd6 214 % HEBREW LIGATURE YIDDISH DOUBLE YOD 214
+  /uni05F3           % 0xd7 215 % GERESH 215
+  /uni05F4           % 0xd8 216 % GERSHAYIM 216
+  /Ugrave            % 0xd9 217
+  /Uacute            % 0xda 218
+  /Ucircumflex       % 0xdb 219
+  /Udieresis         % 0xdc 220
+  /Yacute            % 0xdd 221
+  /Thorn             % 0xde 222
+  /SS                % 0xdf 223  % Ugh germandbls in Latin 1
+
+                                 % hebrew plain letters 224
+  /afii57664         % 0xe0 224  % alef beth gimel dalet
+  /afii57665         % 0xe1 225  % alef beth gimel dalet
+  /afii57666         % 0xe2 226  % alef beth gimel dalet
+  /afii57667         % 0xe3 227  % alef beth gimel dalet
+  /afii57668         % 0xe4 228  % he vav zayin het
+  /afii57669         % 0xe5 229  % he vav zayin het
+  /afii57670         % 0xe6 230  % he vav zayin het
+  /afii57671         % 0xe7 231  % he vav zayin het
+  /afii57672         % 0xe8 232  % tet yod kaf-sofit kaf
+  /afii57673         % 0xe9 233  % tet yod kaf-sofit kaf
+  /afii57674         % 0xea 234  % tet yod kaf-sofit kaf
+  /afii57675         % 0xeb 235  % tet yod kaf-sofit kaf
+  /afii57676         % 0xec 236  % lamed mem-sofit mem nun-sofit
+  /afii57677         % 0xed 237  % lamed mem-sofit mem nun-sofit
+  /afii57678         % 0xee 238  % lamed mem-sofit mem nun-sofit
+  /afii57679         % 0xef 239  % lamed mem-sofit mem nun-sofit
+
+  /afii57680         % 0xf0 240  % nun samech ayin fe-sofit
+  /afii57681         % 0xf1 241  % nun samech ayin fe-sofit
+  /afii57682         % 0xf2 242  % nun samech ayin fe-sofit
+  /afii57683         % 0xf3 243  % nun samech ayin fe-sofit
+  /afii57684         % 0xf4 244  % pe tsadi-sofit tsadi quf
+  /afii57685         % 0xf5 245  % pe tsadi-sofit tsadi quf
+  /afii57686         % 0xf6 246  % pe tsadi-sofit tsadi quf
+  /afii57687         % 0xf7 247  % pe tsadi-sofit tsadi quf
+  /afii57688         % 0xf8 248  % resh shin tav
+  /afii57689         % 0xf9 249  % resh shin tav
+  /afii57690         % 0xfa 250  % resh shin tav
+
+  /ucircumflex       % 0xfb 251
+  /udieresis         % 0xfc 252
+
+  /afii299           % 0xfd 253  % LEFT-TO-RIGHT MARK 253
+  /afii300           % 0xfe 254  % RIGHT-TO-LEFT MARK 254
+  /germandbls        % 0xff 255  % UGH ydieresis in Latin 1
 ] def
 
-% Ligatures EE = segol, EEE = shva, HE = hataf-segol
-% LIGKERN afii57794 afii57794 =: afii57795
-% LIGKERN afii57795 afii57794 =: afii57799
-% LIGKERN H afii57794 =: afii57801
-
-% Ligatures AA = kamats, HA = hataf-patah
-% LIGKERN afii57798 afii57798 =: afii57797
-% LIGKERN H afii57798 =: afii57800
-
-% Ligatures HO = hataf-kamats
-% LIGKERN H afii57806 =: afii57802
-
-% Ligature MAQAF MAQAF = emdash
-% LIGKERN afii57645 afii57645 =: emdash
+% Ligature MAQAF MAQAF = hyphen (no emdash in hebrew)
+% LIGKERN afii57645 afii57645 =: endash
+% LIGKERN endash afii57645 =: emdash
 
 % Ligatures letter+dagesh
 % LIGKERN afii57664 afii57807 =: uniFB30
@@ -114,13 +305,13 @@
 % LIGKERN afii57668 afii57807 =: uniFB34
 % LIGKERN afii57669 afii57807 =: afii57723
 % LIGKERN afii57670 afii57807 =: uniFB36
-% 
+%
 % LIGKERN afii57672 afii57807 =: uniFB38
 % LIGKERN afii57673 afii57807 =: uniFB39
 % LIGKERN afii57674 afii57807 =: uniFB3A
 % LIGKERN afii57675 afii57807 =: uniFB3B
 % LIGKERN afii57676 afii57807 =: uniFB3C
-% 
+%
 % LIGKERN afii57678 afii57807 =: uniFB3E
 %
 % LIGKERN afii57680 afii57807 =: uniFB40
@@ -135,4 +326,15 @@
 % LIGKERN afii57689 afii57807 =: uniFB49
 % LIGKERN afii57690 afii57807 =: uniFB4A
 
-% eof
+% ayin + nikud under it -> Alternative ayin + nikud
+% LIGKERN afii57682 afii57799  =:| uniFB20
+% LIGKERN afii57682 afii57801  =:| uniFB20
+% LIGKERN afii57682 afii57800  =:| uniFB20
+% LIGKERN afii57682 afii57802  =:| uniFB20
+% LIGKERN afii57682 afii57793  =:| uniFB20
+% LIGKERN afii57682 afii57794  =:| uniFB20
+% LIGKERN afii57682 afii57795  =:| uniFB20
+% LIGKERN afii57682 afii57798  =:| uniFB20
+% LIGKERN afii57682 afii57797  =:| uniFB20
+% LIGKERN afii57682 afii57796  =:| uniFB20
+% LIGKERN afii57682 afii57839  =:| uniFB20
