@@ -103,7 +103,7 @@ uninstall:
 	rm $(TEXMFDIR)/fonts/tfm/public/culmus/*.tfm
 	rm $(TEXMFDIR)/fonts/vf/public/culmus/*.vf
 	rm $(TEXMFDIR)/tex/latex/culmus/culmus.sty
-	(cd (TEXMFDIR)/tex/latex/culmus; \
+	(cd $(TEXMFDIR)/tex/latex/culmus; \
 	    rm -f $(NIKUD_FDS))
 	rm $(TEXMFDIR)/tex/generic/0babel/hebrew.ldf
 
