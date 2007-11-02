@@ -39,6 +39,14 @@ unistall the package at a later time.
 
 Uninstallation may be done by issuing "make uninstall"
 
+Notes to Ubuntu users:
+You will need the texlive-font-utils package in order to install culmus-latx.
+The following commands should do it (at least for 7.04 and 7.10):
+
+sudo apt-get install texlive-font-utils
+make CULMUSDIR=/usr/share/fonts/X11/Type1/ TEXMFDIR=/usr/share/texmf-texlive/
+sudo make install CULMUSDIR=/usr/share/fonts/X11/Type1/ TEXMFDIR=/usr/share/texmf-texlive/
+
 Notes to Packagers
 ------------------
 Packagers might be interested in using "make pgkinstall" instead of 
