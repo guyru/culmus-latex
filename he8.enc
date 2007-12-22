@@ -256,34 +256,34 @@
   /SS                % 0xdf 223  % Ugh germandbls in Latin 1
 
                                  % hebrew plain letters 224
-  /afii57664         % 0xe0 224  % alef beth gimel dalet
-  /afii57665         % 0xe1 225  % alef beth gimel dalet
-  /afii57666         % 0xe2 226  % alef beth gimel dalet
-  /afii57667         % 0xe3 227  % alef beth gimel dalet
-  /afii57668         % 0xe4 228  % he vav zayin het
-  /afii57669         % 0xe5 229  % he vav zayin het
-  /afii57670         % 0xe6 230  % he vav zayin het
-  /afii57671         % 0xe7 231  % he vav zayin het
-  /afii57672         % 0xe8 232  % tet yod kaf-sofit kaf
-  /afii57673         % 0xe9 233  % tet yod kaf-sofit kaf
-  /afii57674         % 0xea 234  % tet yod kaf-sofit kaf
-  /afii57675         % 0xeb 235  % tet yod kaf-sofit kaf
-  /afii57676         % 0xec 236  % lamed mem-sofit mem nun-sofit
-  /afii57677         % 0xed 237  % lamed mem-sofit mem nun-sofit
-  /afii57678         % 0xee 238  % lamed mem-sofit mem nun-sofit
-  /afii57679         % 0xef 239  % lamed mem-sofit mem nun-sofit
+  /afii57664         % 0xe0 224  % alef
+  /afii57665         % 0xe1 225  % beth
+  /afii57666         % 0xe2 226  % gimel
+  /afii57667         % 0xe3 227  % dalet
+  /afii57668         % 0xe4 228  % he
+  /afii57669         % 0xe5 229  % vav
+  /afii57670         % 0xe6 230  % zayin
+  /afii57671         % 0xe7 231  % het
+  /afii57672         % 0xe8 232  % tet
+  /afii57673         % 0xe9 233  % yod
+  /afii57674         % 0xea 234  % kaf-sofit
+  /afii57675         % 0xeb 235  % kaf
+  /afii57676         % 0xec 236  % lamed
+  /afii57677         % 0xed 237  % mem-sofit
+  /afii57678         % 0xee 238  % mem
+  /afii57679         % 0xef 239  % nun-sofit
 
-  /afii57680         % 0xf0 240  % nun samech ayin fe-sofit
-  /afii57681         % 0xf1 241  % nun samech ayin fe-sofit
-  /afii57682         % 0xf2 242  % nun samech ayin fe-sofit
-  /afii57683         % 0xf3 243  % nun samech ayin fe-sofit
-  /afii57684         % 0xf4 244  % pe tsadi-sofit tsadi quf
-  /afii57685         % 0xf5 245  % pe tsadi-sofit tsadi quf
-  /afii57686         % 0xf6 246  % pe tsadi-sofit tsadi quf
-  /afii57687         % 0xf7 247  % pe tsadi-sofit tsadi quf
-  /afii57688         % 0xf8 248  % resh shin tav
-  /afii57689         % 0xf9 249  % resh shin tav
-  /afii57690         % 0xfa 250  % resh shin tav
+  /afii57680         % 0xf0 240  % nun
+  /afii57681         % 0xf1 241  % samech
+  /afii57682         % 0xf2 242  % ayin
+  /afii57683         % 0xf3 243  % pe-sofit
+  /afii57684         % 0xf4 244  % pe
+  /afii57685         % 0xf5 245  % tsadi-sofit
+  /afii57686         % 0xf6 246  % tsadi
+  /afii57687         % 0xf7 247  % quf
+  /afii57688         % 0xf8 248  % resh
+  /afii57689         % 0xf9 249  % shin
+  /afii57690         % 0xfa 250  % tav
 
   /ucircumflex       % 0xfb 251
   /udieresis         % 0xfc 252
