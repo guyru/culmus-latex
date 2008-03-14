@@ -11,21 +11,32 @@ TEXMFDIR=$(DESTDIR)$(TEXMFROOT)
 
 # Determine place of CULMUSDIR, try two options
 ifeq ($(CULMUSDIR),)
+  # options for path to culmus
   CULMUSDIR_OPT1 = /usr/share/fonts/hebrew
   CULMUSDIR_OPT2 = /usr/share/fonts/X11/Type1
+  CULMUSDIR_OPT3 = /usr/share/fonts/culmus
+
   FCANDID = DavidCLM-Bold.afm
   FCANDID1 = $(CULMUSDIR_OPT1)/$(FCANDID)
   FCANDID2 = $(CULMUSDIR_OPT2)/$(FCANDID)
-  CLM_FOUND := $(shell  if [ -f ${FCANDID1} ]; then echo 1; else echo 0; fi)
-  ifeq ($(CLM_FOUND),1)
+  FCANDID3 = $(CULMUSDIR_OPT3)/$(FCANDID)
+
+  CLM_FOUND_1 := $(shell  if [ -f ${FCANDID1} ]; then echo 1; else echo 0; fi)
+  CLM_FOUND_2 := $(shell  if [ -f ${FCANDID2} ]; then echo 1; else echo 0; fi)
+  CLM_FOUND_3 := $(shell  if [ -f ${FCANDID3} ]; then echo 1; else echo 0; fi)
+
+  ifeq ($(CLM_FOUND_1),1)
     CULMUSDIR = $(CULMUSDIR_OPT1)
-  else
-    CLM_FOUND := $(shell  if [ -f ${FCANDID2} ]; then echo 1; else echo 0; fi)
-    ifeq ($(CLM_FOUND),1)
+  else 
+    ifeq ($(CLM_FOUND_2),1)
       CULMUSDIR = $(CULMUSDIR_OPT2)
     else
-      $(error CULMUSDIR is undefined.)
-    endif
+      ifeq ($(CLM_FOUND_3),1)
+        CULMUSDIR = $(CULMUSDIR_OPT3)
+      else
+        $(error CULMUSDIR is undefined.)
+      endif
+    endif  
   endif
 endif
 
