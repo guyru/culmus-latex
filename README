@@ -15,7 +15,7 @@ package) for more details.
 
 Requirements 
 ------------
-- teTex-3.0 (may also work on older version but untested).
+- teTex-3.0 (may also work on older version but untested). TeXLive 2007 recommended
 - The "Culmus" fonts package.
 
 Installation
@@ -74,7 +74,9 @@ include: aharoni, miriam, david, nachlieli, ellinia, yehuda, drugulin.
 Change Log
 ----------
 
-culmus-latex-0.6 (UNRELEASED YET)
+culmus-latex-0.6 
+- Add support for nikud
+- Automatic recognition of TEXMF and CULMUSDIR settings.
 - Add support for DESTDIR in the Makefile
 
 culmus-latex-0.5
