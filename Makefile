@@ -72,8 +72,7 @@ install: pkginstall
 	updmap-sys --enable Map=culmus.map
 
 pkginstall: tfms
-	mkdir -p $(TEXMFDIR)/dvips/culmus/ \
-		$(TEXMFDIR)/fonts/afm/public/culmus/ \
+	mkdir -p $(TEXMFDIR)/fonts/afm/public/culmus/ \
 		$(TEXMFDIR)/fonts/type1/public/culmus/ \
 		$(TEXMFDIR)/fonts/enc/dvips/culmus/ \
 		$(TEXMFDIR)/fonts/map/dvips/ \
