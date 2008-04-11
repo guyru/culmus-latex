@@ -1,5 +1,25 @@
 \ProvidesPackage{culmus}
 
+% Add option to use legacy (small) font size (this font size was used
+% until culmus-latex-0.6
+\DeclareOption{legacy-size}{
+	\def\frank@scale{1}
+	\def\david@scale{1}
+}
+
+% whether to use David as the default Roman font.
+\def\culmus@useDavid{0}
+\DeclareOption{use-david}{
+	\def\culmus@useDavid{1}
+}
+% Set multipliers to adjust font size to be some sane value (make it about
+% the same size as the old Hebrew fonts.
+\def\frank@scale{1.20}
+\def\david@scale{1.20}
+
+% Process options now to overide the size multipliers
+\ProcessOptions\relax
+
 \DeclareFontEncoding{HE8}{}{}
 \providecommand{\HeblatexEncoding}{HE8}%
 \providecommand{\HeblatexEncodingFile}{he8enc}%
@@ -17,12 +37,21 @@
 
 % and finally: make it the default of HE8:
 \DeclareFontFamily{HE8}{cmr}{}
-\DeclareFontShape{HE8}{cmr}{m}{n} {<-> frank}{}
-\DeclareFontShape{HE8}{cmr}{m}{it} {<-> franki}{}
-\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> franki}{}
-\DeclareFontShape{HE8}{cmr}{b}{n} {<-> frankb}{}
-\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> frankb}{}
-\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> frankbi}{}
+\ifnum \culmus@useDavid=0
+	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\frank@scale]frank}{}
+	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\frank@scale]franki}{}
+	\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> s*[\frank@scale]franki}{}
+	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\frank@scale]frankb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\frank@scale]frankb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\frank@scale]frankbi}{}
+\else
+	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\david@scale]david}{}
+	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\david@scale]davidi}{}
+	\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> s*[\david@scale]davidi}{}
+	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\david@scale]davidb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\david@scale]davidb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\david@scale]davidbi}{}
+\fi
 
 \DeclareFontFamily{HE8}{cmtt}{}
 \DeclareFontShape{HE8}{cmtt}{m}{n} {<-> miriam}{}
