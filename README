@@ -13,6 +13,9 @@ culmus-latex is released under the term of the GPL version 2, or
 (at your option) any later version. See GNU-GPL (distributed in this 
 package) for more details.
 
+This license only refers to the package itself. Make sure your read the copying
+conditions that came with the Culmus font package.
+
 Requirements 
 ------------
 - teTex-3.0 (may also work on older version but untested). TeXLive 2007 recommended

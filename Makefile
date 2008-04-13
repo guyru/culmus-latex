@@ -1,3 +1,6 @@
+PACKAGE=culmus-latex
+VERSION=0.7
+
 # Determine TEXMFROOT value by the system
 TEXLIVEDIR = /usr/share/texmf-texlive
 TEXLIVE := $(shell if [ -d ${TEXLIVEDIR} ]; then echo 1; else echo 0; fi)
@@ -71,7 +74,7 @@ install: pkginstall
 	mktexlsr
 	updmap-sys --enable Map=culmus.map
 
-pkginstall: tfms
+pkginstall: tfms nikud-fds
 	mkdir -p $(TEXMFDIR)/fonts/afm/public/culmus/ \
 		$(TEXMFDIR)/fonts/type1/public/culmus/ \
 		$(TEXMFDIR)/fonts/enc/dvips/culmus/ \
@@ -102,6 +105,20 @@ clean:
 	rm -f *.tfm *.vf *.vpl *.pfb *.t3 culmus.map tfms.DONE
 	rm -rf tafm.d
 	rm -f ${NIKUD_FDS}
+
+dist:
+	mkdir ${PACKAGE}-${VERSION}
+	make pkginstall DESTDIR=${PACKAGE}-${VERSION}
+	cp Makefile.dist ${PACKAGE}-${VERSION}/Makefile
+	cp README ${PACKAGE}-${VERSION}
+	cp GNU-GPL ${PACKAGE}-${VERSION}
+	
+	tar zcvf ${PACKAGE}-${VERSION}.tar.gz ${PACKAGE}-${VERSION}
+	
+	#clean up
+	make clean
+	rm -rf ${PACKAGE}-${VERSION} 
+	
 
 uninstall:
 #	this is just a partial uninstall as it't won't remove the folders that
