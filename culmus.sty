@@ -1,10 +1,10 @@
 \ProvidesPackage{culmus}
+% $Id$
 
 % Add option to use legacy (small) font size (this font size was used
 % until culmus-latex-0.6
 \DeclareOption{legacy-size}{
-	\def\frank@scale{1}
-	\def\david@scale{1}
+	\def\font@scale{1}
 }
 
 % whether to use David as the default Roman font.
@@ -14,8 +14,7 @@
 }
 % Set multipliers to adjust font size to be some sane value (make it about
 % the same size as the old Hebrew fonts.
-\def\frank@scale{1.20}
-\def\david@scale{1.20}
+\def\font@scale{1.20}
 
 % Process options now to overide the size multipliers
 \ProcessOptions\relax
@@ -35,22 +34,32 @@
 % note that redis is larger than shstk
 \DeclareTextFontCommand{\textshstk}{\fontfamily{aharoni}\selectfont}
 
+%%The following is the prefered way to set default fonts but it causes problems with english text
+% set default fonts
+%\ifnum \culmus@useDavid=0
+	%\renewcommand{\rmdefault}{frank}
+%\else
+	%\renewcommand{\rmdefault}{david}
+%\fi
+%\renewcommand{\sfdefault}{nachlieli}
+%\renewcommand{\ttdefault}{miriam}
+
 % and finally: make it the default of HE8:
 \DeclareFontFamily{HE8}{cmr}{}
 \ifnum \culmus@useDavid=0
-	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\frank@scale]frank}{}
-	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\frank@scale]franki}{}
-	\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> s*[\frank@scale]franki}{}
-	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\frank@scale]frankb}{}
-	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\frank@scale]frankb}{}
-	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\frank@scale]frankbi}{}
+	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\font@scale]frank}{}
+	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\font@scale]franki}{}
+	\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> s*[\font@scale]franki}{}
+	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\font@scale]frankb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\font@scale]frankb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\font@scale]frankbi}{}
 \else
-	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\david@scale]david}{}
-	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\david@scale]davidi}{}
-	\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> s*[\david@scale]davidi}{}
-	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\david@scale]davidb}{}
-	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\david@scale]davidb}{}
-	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\david@scale]davidbi}{}
+	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\font@scale]david}{}
+	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\font@scale]davidi}{}
+	\DeclareFontShape{HE8}{cmr}{m}{sl} {<-> s*[\font@scale]davidi}{}
+	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\font@scale]davidb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\font@scale]davidb}{}
+	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\font@scale]davidbi}{}
 \fi
 
 \DeclareFontFamily{HE8}{cmtt}{}
@@ -68,6 +77,72 @@
 \DeclareFontShape{HE8}{cmss}{b}{n} {<-> nachlielib}{}
 \DeclareFontShape{HE8}{cmss}{bx}{n} {<-> nachlielib}{}
 \DeclareFontShape{HE8}{cmss}{bx}{it} {<-> nachlielibi}{}
+
+% Declare all font famelies used (this should go into *.fd files one day)
+% fonts that are missing are commented out.
+\DeclareFontFamily{HE8}{frank}{}
+\DeclareFontShape{HE8}{frank}{m}{n} {<-> s*[\font@scale]frank}{}
+\DeclareFontShape{HE8}{frank}{m}{it} {<-> s*[\font@scale]franki}{}
+\DeclareFontShape{HE8}{frank}{m}{sl} {<-> s*[\font@scale]franki}{}
+\DeclareFontShape{HE8}{frank}{b}{n} {<-> s*[\font@scale]frankb}{}
+\DeclareFontShape{HE8}{frank}{bx}{n} {<-> s*[\font@scale]frankb}{}
+\DeclareFontShape{HE8}{frank}{bx}{it} {<-> s*[\font@scale]frankbi}{}
+
+\DeclareFontFamily{HE8}{david}{}
+\DeclareFontShape{HE8}{david}{m}{n} {<-> s*[\font@scale]david}{}
+\DeclareFontShape{HE8}{david}{m}{it} {<-> s*[\font@scale]davidi}{}
+\DeclareFontShape{HE8}{david}{m}{sl} {<-> s*[\font@scale]davidi}{}
+\DeclareFontShape{HE8}{david}{b}{n} {<-> s*[\font@scale]davidb}{}
+\DeclareFontShape{HE8}{david}{bx}{n} {<-> s*[\font@scale]davidb}{}
+\DeclareFontShape{HE8}{david}{bx}{it} {<-> s*[\font@scale]davidbi}{}
+
+\DeclareFontFamily{HE8}{miriam}{}
+\DeclareFontShape{HE8}{miriam}{m}{n} {<-> s*[\font@scale]miriam}{}
+\DeclareFontShape{HE8}{miriam}{m}{it} {<-> s*[\font@scale]miriami}{}
+\DeclareFontShape{HE8}{miriam}{m}{sl} {<-> s*[\font@scale]miriami}{}
+\DeclareFontShape{HE8}{miriam}{b}{n} {<-> s*[\font@scale]miriamb}{}
+\DeclareFontShape{HE8}{miriam}{bx}{n} {<-> s*[\font@scale]miriamb}{}
+\DeclareFontShape{HE8}{miriam}{bx}{it} {<-> s*[\font@scale]miriambi}{}
+
+\DeclareFontFamily{HE8}{nachlieli}{}
+\DeclareFontShape{HE8}{nachlieli}{m}{n} {<-> s*[\font@scale]nachlieli}{}
+\DeclareFontShape{HE8}{nachlieli}{m}{it} {<-> s*[\font@scale]nachlielii}{}
+\DeclareFontShape{HE8}{nachlieli}{m}{sl} {<-> s*[\font@scale]nachlielii}{}
+\DeclareFontShape{HE8}{nachlieli}{b}{n} {<-> s*[\font@scale]nachlielib}{}
+\DeclareFontShape{HE8}{nachlieli}{bx}{n} {<-> s*[\font@scale]nachlielib}{}
+\DeclareFontShape{HE8}{nachlieli}{bx}{it} {<-> s*[\font@scale]nachlielibi}{}
+
+\DeclareFontFamily{HE8}{aharoni}{}
+\DeclareFontShape{HE8}{aharoni}{m}{n} {<-> s*[\font@scale]aharoni}{}
+\DeclareFontShape{HE8}{aharoni}{m}{it} {<-> s*[\font@scale]aharonii}{}
+\DeclareFontShape{HE8}{aharoni}{m}{sl} {<-> s*[\font@scale]aharonii}{}
+\DeclareFontShape{HE8}{aharoni}{b}{n} {<-> s*[\font@scale]aharonib}{}
+\DeclareFontShape{HE8}{aharoni}{bx}{n} {<-> s*[\font@scale]aharonib}{}
+\DeclareFontShape{HE8}{aharoni}{bx}{it} {<-> s*[\font@scale]aharonibi}{}
+
+\DeclareFontFamily{HE8}{ellinia}{}
+\DeclareFontShape{HE8}{ellinia}{m}{n} {<-> s*[\font@scale]ellinia}{}
+\DeclareFontShape{HE8}{ellinia}{m}{it} {<-> s*[\font@scale]elliniai}{}
+\DeclareFontShape{HE8}{ellinia}{m}{sl} {<-> s*[\font@scale]elliniai}{}
+\DeclareFontShape{HE8}{ellinia}{b}{n} {<-> s*[\font@scale]elliniab}{}
+\DeclareFontShape{HE8}{ellinia}{bx}{n} {<-> s*[\font@scale]elliniab}{}
+\DeclareFontShape{HE8}{ellinia}{bx}{it} {<-> s*[\font@scale]elliniabi}{}
+
+\DeclareFontFamily{HE8}{yehuda}{}
+\DeclareFontShape{HE8}{yehuda}{m}{n} {<-> s*[\font@scale]yehuda}{}
+%\DeclareFontShape{HE8}{yehuda}{m}{it} {<-> s*[\font@scale]yehudai}{}
+\DeclareFontShape{HE8}{yehuda}{m}{sl} {<-> s*[\font@scale]yehudai}{}
+\DeclareFontShape{HE8}{yehuda}{b}{n} {<-> s*[\font@scale]yehudab}{}
+\DeclareFontShape{HE8}{yehuda}{bx}{n} {<-> s*[\font@scale]yehudab}{}
+%\DeclareFontShape{HE8}{yehuda}{bx}{it} {<-> s*[\font@scale]yehudabi}{}
+
+\DeclareFontFamily{HE8}{drugulin}{}
+%\DeclareFontShape{HE8}{drugulin}{m}{n} {<-> s*[\font@scale]drugulin}{}
+%\DeclareFontShape{HE8}{drugulin}{m}{it} {<-> s*[\font@scale]drugulini}{}
+%\DeclareFontShape{HE8}{drugulin}{m}{sl} {<-> s*[\font@scale]drugulini}{}
+\DeclareFontShape{HE8}{drugulin}{b}{n} {<-> s*[\font@scale]drugulinb}{}
+\DeclareFontShape{HE8}{drugulin}{bx}{n} {<-> s*[\font@scale]drugulinb}{}
+\DeclareFontShape{HE8}{drugulin}{bx}{it} {<-> s*[\font@scale]drugulinbi}{}
 
 %Fix some nikud naming problems
 \let\hebsheva=\sheva
