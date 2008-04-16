@@ -1,4 +1,4 @@
-\ProvidesPackage{culmus}
+\ProvidesPackage{culmus}[$Revision $ Provides the Culmus Fonts for Hebrew]
 % $Id$
 
 % Add option to use legacy (small) font size (this font size was used
@@ -45,7 +45,9 @@
 %\renewcommand{\ttdefault}{miriam}
 
 % and finally: make it the default of HE8:
+% this is done by defining font substitues for cm and lm
 \DeclareFontFamily{HE8}{cmr}{}
+\DeclareFontFamily{HE8}{lmr}{}
 \ifnum \culmus@useDavid=0
 	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\font@scale]frank}{}
 	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\font@scale]franki}{}
@@ -53,6 +55,13 @@
 	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\font@scale]frankb}{}
 	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\font@scale]frankb}{}
 	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\font@scale]frankbi}{}
+
+	\DeclareFontShape{HE8}{lmr}{m}{n} {<-> s*[\font@scale]frank}{}
+	\DeclareFontShape{HE8}{lmr}{m}{it} {<-> s*[\font@scale]franki}{}
+	\DeclareFontShape{HE8}{lmr}{m}{sl} {<-> s*[\font@scale]franki}{}
+	\DeclareFontShape{HE8}{lmr}{b}{n} {<-> s*[\font@scale]frankb}{}
+	\DeclareFontShape{HE8}{lmr}{bx}{n} {<-> s*[\font@scale]frankb}{}
+	\DeclareFontShape{HE8}{lmr}{bx}{it} {<-> s*[\font@scale]frankbi}{}
 \else
 	\DeclareFontShape{HE8}{cmr}{m}{n} {<-> s*[\font@scale]david}{}
 	\DeclareFontShape{HE8}{cmr}{m}{it} {<-> s*[\font@scale]davidi}{}
@@ -60,6 +69,13 @@
 	\DeclareFontShape{HE8}{cmr}{b}{n} {<-> s*[\font@scale]davidb}{}
 	\DeclareFontShape{HE8}{cmr}{bx}{n} {<-> s*[\font@scale]davidb}{}
 	\DeclareFontShape{HE8}{cmr}{bx}{it} {<-> s*[\font@scale]davidbi}{}
+
+	\DeclareFontShape{HE8}{lmr}{m}{n} {<-> s*[\font@scale]david}{}
+	\DeclareFontShape{HE8}{lmr}{m}{it} {<-> s*[\font@scale]davidi}{}
+	\DeclareFontShape{HE8}{lmr}{m}{sl} {<-> s*[\font@scale]davidi}{}
+	\DeclareFontShape{HE8}{lmr}{b}{n} {<-> s*[\font@scale]davidb}{}
+	\DeclareFontShape{HE8}{lmr}{bx}{n} {<-> s*[\font@scale]davidb}{}
+	\DeclareFontShape{HE8}{lmr}{bx}{it} {<-> s*[\font@scale]davidbi}{}
 \fi
 
 \DeclareFontFamily{HE8}{cmtt}{}
@@ -70,6 +86,14 @@
 \DeclareFontShape{HE8}{cmtt}{bx}{n} {<-> miriamb}{}
 \DeclareFontShape{HE8}{cmtt}{bx}{it} {<-> miriambi}{}
 
+\DeclareFontFamily{HE8}{lmtt}{}
+\DeclareFontShape{HE8}{lmtt}{m}{n} {<-> miriam}{}
+\DeclareFontShape{HE8}{lmtt}{m}{it} {<-> miriami}{}
+\DeclareFontShape{HE8}{lmtt}{m}{sl} {<-> miriami}{}
+\DeclareFontShape{HE8}{lmtt}{b}{n} {<-> miriamb}{}
+\DeclareFontShape{HE8}{lmtt}{bx}{n} {<-> miriamb}{}
+\DeclareFontShape{HE8}{lmtt}{bx}{it} {<-> miriambi}{}
+
 \DeclareFontFamily{HE8}{cmss}{}
 \DeclareFontShape{HE8}{cmss}{m}{n} {<-> nachlieli}{}
 \DeclareFontShape{HE8}{cmss}{m}{it} {<-> nachlielii}{}
@@ -77,6 +101,14 @@
 \DeclareFontShape{HE8}{cmss}{b}{n} {<-> nachlielib}{}
 \DeclareFontShape{HE8}{cmss}{bx}{n} {<-> nachlielib}{}
 \DeclareFontShape{HE8}{cmss}{bx}{it} {<-> nachlielibi}{}
+
+\DeclareFontFamily{HE8}{lmss}{}
+\DeclareFontShape{HE8}{lmss}{m}{n} {<-> nachlieli}{}
+\DeclareFontShape{HE8}{lmss}{m}{it} {<-> nachlielii}{}
+\DeclareFontShape{HE8}{lmss}{m}{sl} {<-> nachlielii}{}
+\DeclareFontShape{HE8}{lmss}{b}{n} {<-> nachlielib}{}
+\DeclareFontShape{HE8}{lmss}{bx}{n} {<-> nachlielib}{}
+\DeclareFontShape{HE8}{lmss}{bx}{it} {<-> nachlielibi}{}
 
 % Declare all font famelies used (this should go into *.fd files one day)
 % fonts that are missing are commented out.
