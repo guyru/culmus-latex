@@ -3,7 +3,7 @@
 
 % Add option to use legacy (small) font size (this font size was used
 % until culmus-latex-0.6
-\DeclareOption{legacy-size}{
+\DeclareOption{small-size}{
 	\def\font@scale{1}
 }
 
@@ -79,36 +79,36 @@
 \fi
 
 \DeclareFontFamily{HE8}{cmtt}{}
-\DeclareFontShape{HE8}{cmtt}{m}{n} {<-> miriam}{}
-\DeclareFontShape{HE8}{cmtt}{m}{it} {<-> miriami}{}
-\DeclareFontShape{HE8}{cmtt}{m}{sl} {<-> miriami}{}
-\DeclareFontShape{HE8}{cmtt}{b}{n} {<-> miriamb}{}
-\DeclareFontShape{HE8}{cmtt}{bx}{n} {<-> miriamb}{}
-\DeclareFontShape{HE8}{cmtt}{bx}{it} {<-> miriambi}{}
+\DeclareFontShape{HE8}{cmtt}{m}{n} {<-> s*[\font@scale]miriam}{}
+\DeclareFontShape{HE8}{cmtt}{m}{it} {<-> s*[\font@scale]miriami}{}
+\DeclareFontShape{HE8}{cmtt}{m}{sl} {<-> s*[\font@scale]miriami}{}
+\DeclareFontShape{HE8}{cmtt}{b}{n} {<-> s*[\font@scale]miriamb}{}
+\DeclareFontShape{HE8}{cmtt}{bx}{n} {<-> s*[\font@scale]miriamb}{}
+\DeclareFontShape{HE8}{cmtt}{bx}{it} {<-> s*[\font@scale]miriambi}{}
 
 \DeclareFontFamily{HE8}{lmtt}{}
-\DeclareFontShape{HE8}{lmtt}{m}{n} {<-> miriam}{}
-\DeclareFontShape{HE8}{lmtt}{m}{it} {<-> miriami}{}
-\DeclareFontShape{HE8}{lmtt}{m}{sl} {<-> miriami}{}
-\DeclareFontShape{HE8}{lmtt}{b}{n} {<-> miriamb}{}
-\DeclareFontShape{HE8}{lmtt}{bx}{n} {<-> miriamb}{}
-\DeclareFontShape{HE8}{lmtt}{bx}{it} {<-> miriambi}{}
+\DeclareFontShape{HE8}{lmtt}{m}{n} {<-> s*[\font@scale]miriam}{}
+\DeclareFontShape{HE8}{lmtt}{m}{it} {<-> s*[\font@scale]miriami}{}
+\DeclareFontShape{HE8}{lmtt}{m}{sl} {<-> s*[\font@scale]miriami}{}
+\DeclareFontShape{HE8}{lmtt}{b}{n} {<-> s*[\font@scale]miriamb}{}
+\DeclareFontShape{HE8}{lmtt}{bx}{n} {<-> s*[\font@scale]miriamb}{}
+\DeclareFontShape{HE8}{lmtt}{bx}{it} {<-> s*[\font@scale]miriambi}{}
 
 \DeclareFontFamily{HE8}{cmss}{}
-\DeclareFontShape{HE8}{cmss}{m}{n} {<-> nachlieli}{}
-\DeclareFontShape{HE8}{cmss}{m}{it} {<-> nachlielii}{}
-\DeclareFontShape{HE8}{cmss}{m}{sl} {<-> nachlielii}{}
-\DeclareFontShape{HE8}{cmss}{b}{n} {<-> nachlielib}{}
-\DeclareFontShape{HE8}{cmss}{bx}{n} {<-> nachlielib}{}
-\DeclareFontShape{HE8}{cmss}{bx}{it} {<-> nachlielibi}{}
+\DeclareFontShape{HE8}{cmss}{m}{n} {<-> s*[\font@scale]nachlieli}{}
+\DeclareFontShape{HE8}{cmss}{m}{it} {<-> s*[\font@scale]nachlielii}{}
+\DeclareFontShape{HE8}{cmss}{m}{sl} {<-> s*[\font@scale]nachlielii}{}
+\DeclareFontShape{HE8}{cmss}{b}{n} {<-> s*[\font@scale]nachlielib}{}
+\DeclareFontShape{HE8}{cmss}{bx}{n} {<-> s*[\font@scale]nachlielib}{}
+\DeclareFontShape{HE8}{cmss}{bx}{it} {<-> s*[\font@scale]nachlielibi}{}
 
 \DeclareFontFamily{HE8}{lmss}{}
-\DeclareFontShape{HE8}{lmss}{m}{n} {<-> nachlieli}{}
-\DeclareFontShape{HE8}{lmss}{m}{it} {<-> nachlielii}{}
-\DeclareFontShape{HE8}{lmss}{m}{sl} {<-> nachlielii}{}
-\DeclareFontShape{HE8}{lmss}{b}{n} {<-> nachlielib}{}
-\DeclareFontShape{HE8}{lmss}{bx}{n} {<-> nachlielib}{}
-\DeclareFontShape{HE8}{lmss}{bx}{it} {<-> nachlielibi}{}
+\DeclareFontShape{HE8}{lmss}{m}{n} {<-> s*[\font@scale]nachlieli}{}
+\DeclareFontShape{HE8}{lmss}{m}{it} {<-> s*[\font@scale]nachlielii}{}
+\DeclareFontShape{HE8}{lmss}{m}{sl} {<-> s*[\font@scale]nachlielii}{}
+\DeclareFontShape{HE8}{lmss}{b}{n} {<-> s*[\font@scale]nachlielib}{}
+\DeclareFontShape{HE8}{lmss}{bx}{n} {<-> s*[\font@scale]nachlielib}{}
+\DeclareFontShape{HE8}{lmss}{bx}{it} {<-> s*[\font@scale]nachlielibi}{}
 
 % Declare all font famelies used (this should go into *.fd files one day)
 % fonts that are missing are commented out.
