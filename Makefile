@@ -111,7 +111,9 @@ dist:
 	make pkginstall DESTDIR=${PACKAGE}-${VERSION}
 	cp Makefile.dist ${PACKAGE}-${VERSION}/Makefile
 	cp README ${PACKAGE}-${VERSION}
+	cp LICENSE-Culmus ${PACKAGE}-${VERSION}
 	cp GNU-GPL ${PACKAGE}-${VERSION}
+	cp -R examples ${PACKAGE}-${VERSION}
 	
 	tar zcvf ${PACKAGE}-${VERSION}.tar.gz ${PACKAGE}-${VERSION}
 	
