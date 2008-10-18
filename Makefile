@@ -19,7 +19,7 @@ ifeq ($(CULMUSDIR),)
   CULMUSDIR_OPT2 = /usr/share/fonts/X11/Type1
   CULMUSDIR_OPT3 = /usr/share/fonts/culmus
 
-  FCANDID = DavidCLM-Bold.afm
+  FCANDID = FrankRuehlCLM-Bold.afm
   FCANDID1 = $(CULMUSDIR_OPT1)/$(FCANDID)
   FCANDID2 = $(CULMUSDIR_OPT2)/$(FCANDID)
   FCANDID3 = $(CULMUSDIR_OPT3)/$(FCANDID)
@@ -65,7 +65,7 @@ he8%.fd: he8zzznikud.zfd Makefile
 	   sed -e s/zzz/$${nm}/g < $< > $@
 	@ls -l $@
 
-tfms.DONE: Makefile ./mkCLMtfm.sh ./mkCLMnkd.sh
+tfms.DONE: Makefile ./mkCLMtfm.sh ./mkCLMnkd.sh nikud-fds
 	./mkCLMtfm.sh $(CULMUSDIR)
 	./mkCLMnkd.sh $(CULMUSDIR) culmus.map
 	touch $@
