@@ -81,7 +81,9 @@ culmus-latex-0.7
   packages will look the same in culmus-latex. This action can be reveres by
   paasing the "small-size" option to the package.
 - Add package optio (use-david) that allows to select David as the default
-  roman font
+  roman font.
+- Makefile target to create tarballs that don't require the Culmus fonts or
+  fontutils in order to install.
 - Made culmus-latex work correctly with the Latin Modern package.
 - Disabled unnecessary creation of folders.
 - Added new example.
