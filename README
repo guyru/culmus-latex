@@ -76,6 +76,16 @@ include: aharoni, miriam, david, nachlieli, ellinia, yehuda, drugulin.
 Change Log
 ----------
 
+culmus-latex-0.7
+- Default font size was adjusted (now bigger) so documents written in older
+  packages will look the same in culmus-latex. This action can be reveres by
+  paasing the "small-size" option to the package.
+- Add package optio (use-david) that allows to select David as the default
+  roman font
+- Made culmus-latex work correctly with the Latin Modern package.
+- Disabled unnecessary creation of folders.
+- Added new example.
+
 culmus-latex-0.6 
 - Add support for nikud
 - Automatic recognition of TEXMF and CULMUSDIR settings.
