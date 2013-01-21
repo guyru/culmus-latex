@@ -1,5 +1,5 @@
 PACKAGE=culmus-latex
-VERSION=0.7
+VERSION=0.7-r1
 
 # Determine TEXMFROOT value by the system
 TEXLIVEDIR = /usr/share/texmf-texlive

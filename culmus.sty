@@ -1,5 +1,4 @@
-\ProvidesPackage{culmus}[0000/00/00 $Revision$ Culmus Fonts for Hebrew]
-% $Id$
+\ProvidesPackage{culmus}[2013/01/21 Culmus Fonts for Hebrew]
 
 % Add option to use legacy (small) font size (this font size was used
 % until culmus-latex-0.6
@@ -197,3 +196,32 @@
 \let\hebsindot=\sindot
 \let\hebsofpasuq=\sofpasuq
 
+% Here we map unicode glyphs to their location in the he8 encoding used by culmus-latex
+% The numbers must be upper case
+\DeclareUnicodeCharacter{05D0}{\char"E0} % aleph
+\DeclareUnicodeCharacter{05D1}{\char"E1} % bet
+\DeclareUnicodeCharacter{05D2}{\char"E2} % gimel
+\DeclareUnicodeCharacter{05D3}{\char"E3} % dalet
+\DeclareUnicodeCharacter{05D4}{\char"E4} % he
+\DeclareUnicodeCharacter{05D5}{\char"E5} % vav
+\DeclareUnicodeCharacter{05D6}{\char"E6} % zayin
+\DeclareUnicodeCharacter{05D7}{\char"E7} % het
+\DeclareUnicodeCharacter{05D8}{\char"E8} % tet
+\DeclareUnicodeCharacter{05D9}{\char"E9} % yod
+\DeclareUnicodeCharacter{05DA}{\char"EA} % kaf-sofit
+\DeclareUnicodeCharacter{05DB}{\char"EB} % kaf
+\DeclareUnicodeCharacter{05DC}{\char"EC} % lamed
+\DeclareUnicodeCharacter{05DD}{\char"ED} % mem-sofit
+\DeclareUnicodeCharacter{05DE}{\char"EE} % mem
+\DeclareUnicodeCharacter{05DF}{\char"EF} % nun-sofit
+\DeclareUnicodeCharacter{05E0}{\char"F0} % nun
+\DeclareUnicodeCharacter{05E1}{\char"F1} % samech
+\DeclareUnicodeCharacter{05E2}{\char"F2} % ayin
+\DeclareUnicodeCharacter{05E3}{\char"F3} % pe-sofit
+\DeclareUnicodeCharacter{05E4}{\char"F4} % pe
+\DeclareUnicodeCharacter{05E5}{\char"F5} % tsadi-sofit
+\DeclareUnicodeCharacter{05E6}{\char"F6} % tsadi
+\DeclareUnicodeCharacter{05E7}{\char"F7} % quf
+\DeclareUnicodeCharacter{05E8}{\char"F8} % resh
+\DeclareUnicodeCharacter{05E9}{\char"F9} % shin
+\DeclareUnicodeCharacter{05EA}{\char"FA} % tav
