@@ -14,10 +14,13 @@ culmus-latex is released under the term of the GPL version 2, or
 package) for more details.
 
 This license only refers to the package itself. Terms of use and license of the 
-the Culmus fonts that come with this package (if you received a package that provides them) is covered in the file LICENSE-Culmus
+Culmus fonts that come with this package (if you received a package that
+provides them) is covered in the file LICENSE-Culmus.
+
 Requirements 
 ------------
-- teTex-3.0 (may also work on older version but untested). TeXLive 2007 recommended
+- teTex-3.0 (may also work on older version but untested). TeXLive 2007
+  is recommended.
 - The "Culmus" fonts package.
 
 Installation
@@ -25,14 +28,17 @@ Installation
 To install culmus-latex untar the package and cd into the 
 package's directory and execute:
 
-make
-make install
+$ make
+# make install
 
 The second command must be done as root. The installation process 
 assumes that the texmf dir resides in /usr/share/texmf and that the 
 culmus fonts reside in /usr/share/fonts/hebrew . To override this 
 settings append to the above command "CULMUSDIR=/path/to/culmus/" and/or 
-"TEXMFDIR=/path/to/texmf" (both without the quotes).
+"TEXMFDIR=/path/to/texmf" (both without the quotes). For example installing
+into a local texmf (assuming TeXLive 2012):
+
+$ make install TEXMFDIR=~/.local/texlive/texmf-local/
 
 After the installation was done you may want to clean some temporary 
 files created during the setup process. You can do it by executing 
@@ -78,7 +84,7 @@ Change Log
 
 culmus-latex-0.7
 - Default font size was adjusted (now bigger) so documents written in older
-  packages will look the same in culmus-latex. This action can be reveres by
+  packages will look the same in culmus-latex. This action can be reversed by
   paasing the "small-size" option to the package.
 - Add package optio (use-david) that allows to select David as the default
   roman font.
